@@ -202,22 +202,23 @@ String imgPath = "/parvoz_data/img_" + String(packetCount) + ".jpg";
     LoRa.beginPacket();
     LoRa.print(telemetry);
     LoRa.endPacket();
-
-    // 🖥️ BOSH QARUV PANELI (DASHBOARD)
-    Serial.println("\n==========================================");
-    Serial.print("🚀 UZCANSAT - PAKET "); Serial.println(packetCount);
-    Serial.println("==========================================");
-    Serial.print("⏱️ Vaqt:       "); Serial.println(timeStr);
-    Serial.print("📍 GPS:        Lat: "); Serial.print(lat); Serial.print(" | Lng: "); Serial.println(lng);
-    Serial.print("   Balandlik:  "); Serial.print(alt); Serial.println(" m");
-    Serial.print("🗺️ Xarita:     "); Serial.println(mapLink); // Xarita linki terminalga chiqadi!
-    Serial.print("⚖️ MPU:        X: "); Serial.print(aX, 2); Serial.print(" | Y: "); Serial.print(aY, 2); Serial.print(" | Z: "); Serial.println(aZ, 2);
-    Serial.print("☁️ Havo(Gaz):  "); Serial.print(mq135_val); Serial.println(" PPM");
-    Serial.println("------------------------------------------");
-    Serial.print("📸 Kamera:     "); Serial.print(imgPath); Serial.print(" ("); Serial.print(camStatus); Serial.println(")");
-    Serial.print("💾 Qora Quti:  telemetry.csv ("); Serial.print(sdStatus); Serial.println(")");
-    Serial.print("📡 LoRa:       Uzatildi ("); Serial.print(sysStatus); Serial.println(")");
-    Serial.println("==========================================");
+    
+    Serial.println(telemetry);
+      // // 🖥️ BOSH QARUV PANELI (DASHBOARD)
+    // Serial.println("\n==========================================");
+    // Serial.print("🚀 UZCANSAT - PAKET "); Serial.println(packetCount);
+    // Serial.println("==========================================");
+    // Serial.print("⏱️ Vaqt:       "); Serial.println(timeStr);
+    // Serial.print("📍 GPS:        Lat: "); Serial.print(lat); Serial.print(" | Lng: "); Serial.println(lng);
+    // Serial.print("   Balandlik:  "); Serial.print(alt); Serial.println(" m");
+    // Serial.print("🗺️ Xarita:     "); Serial.println(mapLink); // Xarita linki terminalga chiqadi!
+    // Serial.print("⚖️ MPU:        X: "); Serial.print(aX, 2); Serial.print(" | Y: "); Serial.print(aY, 2); Serial.print(" | Z: "); Serial.println(aZ, 2);
+    // Serial.print("☁️ Havo(Gaz):  "); Serial.print(mq135_val); Serial.println(" PPM");
+    // Serial.println("------------------------------------------");
+    // Serial.print("📸 Kamera:     "); Serial.print(imgPath); Serial.print(" ("); Serial.print(camStatus); Serial.println(")");
+    // Serial.print("💾 Qora Quti:  telemetry.csv ("); Serial.print(sdStatus); Serial.println(")");
+    // Serial.print("📡 LoRa:       Uzatildi ("); Serial.print(sysStatus); Serial.println(")");
+    // Serial.println("==========================================");
 
     packetCount++;
   }
